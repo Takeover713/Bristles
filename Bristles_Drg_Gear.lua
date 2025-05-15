@@ -229,7 +229,7 @@ function init_gear_sets()
     feet="Flam. Gambieras +2",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Thrud Earring", -- need to change her moonshade earring
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
     left_ring="Sroda Ring",
     right_ring="Niqmaddu Ring",
@@ -242,7 +242,7 @@ function init_gear_sets()
 	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Savage Blase'] = {
+	sets.precast.WS['Savage Blade'] = {
 	ammo="Knobkierrie",
     head="Peltast's Mezail +3",
     body="Nyame Mail", -- sortie +3 body
@@ -251,7 +251,7 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Dgn. Collar +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Thrud Earring", -- need to change her moonshade earring
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
     left_ring="Sroda Ring",
     right_ring="Regal Ring",

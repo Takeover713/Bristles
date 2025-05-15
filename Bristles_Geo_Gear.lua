@@ -65,7 +65,7 @@ end
 function init_gear_sets()
 
 
-	sets.buff.Sleep = {main="Prime Maul"}
+	sets.WakeUpWeapons = {main="Prime Maul"}
 	--------------------------------------
 	-- Midcast sets
 	--------------------------------------
@@ -566,11 +566,11 @@ function init_gear_sets()
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck="Fotia Gorget",
-    waist="Null Belt",
-    left_ear="Brutal Earring",
+    waist="Fotia Belt",
+    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="Ishvara Earring",
     left_ring="Karieyh Ring +1",
-    right_ring="Chirich Ring",
+    right_ring="Chirich Ring +1",
     back="Solemnity Cape",
 	}
 
@@ -594,8 +594,8 @@ function init_gear_sets()
     waist="Null Belt",
     left_ear="Crep. Earring",
     right_ear="Brutal Earring",
-    left_ring="Chirich Ring",
-    right_ring="Chirich Ring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
     back="Null Shawl",
 	}
 	
@@ -627,8 +627,8 @@ function init_gear_sets()
     waist="Null Belt",
     left_ear="Crep. Earring",
     right_ear="Brutal Earring",
-    left_ring="Chirich Ring",
-    right_ring="Chirich Ring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
     back="Null Shawl",
 	}
 
