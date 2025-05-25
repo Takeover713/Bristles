@@ -44,14 +44,14 @@ function init_gear_sets()
 	
 	-- Weapons sets --
 	sets.weapons.Aeneas = {main="Aeneas",sub="Taming Sari"}
-	sets.weapons.Trials = {main="Peeler",sub="Empty"}
+	sets.weapons.Trials = {main="Kartika",sub="Diamond Buckler"}
 	
 	------------------------------
 	  ------ Idle sets ------
 	------------------------------
     
 	sets.idle = {
-		ammo="Staunch Tathlum +1",
+		ammo="Crepuscular",--"Staunch Tathlum +1",
 		head="Malignance Chapeau",
 		body="Malignance Tabard",
 		hands="Nyame Gauntlets",
@@ -275,20 +275,22 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'NIN' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     elseif player.sub_job == 'THF' then
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     else
-        set_macro_page(19, 1)
+        set_macro_page(1, 19)
     end
 end
 
 function sub_job_change(new,old)
-send_command('wait 5;input /lockstyleset 12')
+send_command('wait 5;input /lockstyleset 20')
 end
+
+send_command('wait 5;input /lockstyleset 20')
 
 send_command('exec init.txt')
