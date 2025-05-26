@@ -7,7 +7,7 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','LorgMor')
+	state.Weapons:options('LorgMor')
 	
 	autoindi = "Fury"
 	autogeo = "Frailty"
@@ -24,7 +24,7 @@ function init_gear_sets()
 
 
 	sets.WakeUpWeapons = {main="Lorg Mor"}
-	sets.weapons.LorgMor = {main="Lorg Mor"}
+	sets.weapons.LorgMor = {main="Lorg Mor",sub="Genmei Shield"}
 	
 	------------------
 	-- Midcast sets --
@@ -217,9 +217,7 @@ function init_gear_sets()
 
 	-- Idle sets
 
-	sets.idle = {    
-		main="Idris",
-		sub="Genmei Shield",
+	sets.idle = {
 		range="Dunna",
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
@@ -235,9 +233,7 @@ function init_gear_sets()
 		back="Solemnity Cape"
 }
 		
-	sets.idle.PDT = {		
-		main="Malignance Pole",
-		sub="Achaq Grip",
+	sets.idle.PDT = {
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
@@ -256,9 +252,7 @@ function init_gear_sets()
 	sets.idle.TPEat = set_combine(sets.idle, {neck="Chrys. Torque"})
 
 	-- .Pet sets are for when Luopan is present.
-	sets.idle.Pet = {		
-		main="Idris",
-		sub="Genmei Shield",
+	sets.idle.Pet = {
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -275,8 +269,6 @@ function init_gear_sets()
 }
 
 	sets.idle.PDT.Pet = {
-		main="Idris",
-		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -294,8 +286,6 @@ function init_gear_sets()
 
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {
-		main="Idris",
-		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -312,8 +302,6 @@ function init_gear_sets()
 })
 		
 	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {
-		main="Idris",
-		sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -332,9 +320,7 @@ function init_gear_sets()
 	sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {legs="Bagua Pants +3"}) 
 	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
 
-	sets.idle.Weak = { 
-		main="Malignance Pole",
-		sub="Achaq Grip",
+	sets.idle.Weak = {
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Mallquis Saio +1",
@@ -431,21 +417,21 @@ function init_gear_sets()
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
 	
 	sets.Self_Healing = {
-	main="Daybreak",
-    sub="Ammurapi Shield",
-    range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-    head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
-    body={ name="Vanya Robe", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    legs={ name="Vanya Slops", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
-    feet={ name="Vanya Clogs", augments={'"Cure" potency +5%','"Cure" spellcasting time -15%','"Conserve MP"+6',}},
-    neck="Incanter's Torque",
-    waist="Luminary Sash",
-    left_ear="Mendi. Earring",
-    right_ear="Meili Earring",
-    left_ring="Stikini Ring", -- Stikini +1
-    right_ring="Defending Ring", -- Stikini +1
-    back="Tempered Cape +1",}
+		main="Daybreak",
+		sub="Ammurapi Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Vanya Hood",
+		body={ name="Vanya Robe", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
+		hands={ name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
+		legs={ name="Vanya Slops", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},
+		feet="Vanya Clogs",
+		neck="Incanter's Torque",
+		waist="Luminary Sash",
+		left_ear="Mendi. Earring",
+		right_ear="Meili Earring",
+		left_ring="Stikini Ring", -- stikini +1
+		right_ring="Defending Ring", -- stikini +1
+		back="Tempered Cape +1",}
 	sets.Cure_Received = {neck="Phalaina Locket",ring1="Kunaji Ring",ring2="Asklepian Ring",waist="Gishdubar Sash"}
 	sets.Self_Refresh = {back="Grapevine Cape",waist="Gishdubar Sash",feet="Inspirited Boots"}
 	
@@ -461,18 +447,19 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
+    ammo="Oshasha's Treatise",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body={ name="Nyame Mail", augments={'Path: B',}},
+    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
+    neck="Rep. Plat. Medal",
+    waist="Cornelia's Belt",
     left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Ishvara Earring",
-    left_ring="Karieyh Ring +1",
-    right_ring="Chirich Ring +1",
-    back="Solemnity Cape",
+    right_ear="Mache Earring +1",
+    left_ring="Epaminondas's Ring",
+    right_ring="Karieyh Ring +1",
+    back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 
 	--------------------------------------
@@ -486,19 +473,36 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
-    head="Nyame Helm",
-    body="Nyame Mail",
+	range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    head="Azimuth Hood +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Null Loop",
-    waist="Null Belt",
+    neck={ name="Bagua Charm +2", augments={'Path: A',}},
+    waist="Windbuffet Belt +1",
     left_ear="Crep. Earring",
-    right_ear="Brutal Earring",
+    right_ear="Mache Earring +1",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
-    back="Null Shawl",
+    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	}
+	
+	-- {
+	-- main="Lorg Mor",sub="Genmei Shield",
+    -- range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    -- head="Azimuth Hood +3",
+    -- body={ name="Nyame Mail", augments={'Path: B',}},
+    -- hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
+    -- legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    -- feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    -- neck={ name="Bagua Charm +2", augments={'Path: A',}},
+    -- waist="Windbuffet Belt +1",
+    -- left_ear="Telos Earring",
+    -- right_ear="Mache Earring +1",
+    -- left_ring="Chirich Ring +1",
+    -- right_ring="Chirich Ring +1",
+    -- back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},}
 	
 	-- sets["GEO TP"] = {
     -- main="Tishtrya",
@@ -519,18 +523,18 @@ function init_gear_sets()
 -- }
 		
 	sets.engaged.DW = {
-    head="Nyame Helm",
-    body="Nyame Mail",
+    head="Azimuth Hood +3",
+    body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Null Loop",
-    waist="Null Belt",
+    neck={ name="Bagua Charm +2", augments={'Path: A',}},
+    waist="Windbuffet Belt +1",
     left_ear="Crep. Earring",
-    right_ear="Brutal Earring",
+    right_ear="Mache Earring +1",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
-    back="Null Shawl",
+    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	}
 
 
