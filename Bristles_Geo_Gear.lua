@@ -7,7 +7,7 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('LorgMor')
+	state.Weapons:options('None','Idris','LorgMor')
 	
 	autoindi = "Fury"
 	autogeo = "Frailty"
@@ -25,6 +25,7 @@ function init_gear_sets()
 
 	sets.WakeUpWeapons = {main="Lorg Mor"}
 	sets.weapons.LorgMor = {main="Lorg Mor",sub="Genmei Shield"}
+	sets.weapons.Idris = {main="Idris",sub="Genmei Shield"}
 	
 	------------------
 	-- Midcast sets --
@@ -218,6 +219,7 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
+		main="Lorg Mor",sub="Genmei Shield",
 		range="Dunna",
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
@@ -234,6 +236,7 @@ function init_gear_sets()
 }
 		
 	sets.idle.PDT = {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
@@ -253,6 +256,7 @@ function init_gear_sets()
 
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -269,6 +273,7 @@ function init_gear_sets()
 }
 
 	sets.idle.PDT.Pet = {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -286,6 +291,7 @@ function init_gear_sets()
 
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -302,6 +308,7 @@ function init_gear_sets()
 })
 		
 	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
@@ -321,6 +328,7 @@ function init_gear_sets()
 	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
 
 	sets.idle.Weak = {
+		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Mallquis Saio +1",
@@ -473,6 +481,7 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
+	main="Lorg Mor",sub="Genmei Shield",
 	range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
     head="Azimuth Hood +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
@@ -523,6 +532,7 @@ function init_gear_sets()
 -- }
 		
 	sets.engaged.DW = {
+	main="Lorg Mor",sub="C.Palug Hammer",
     head="Azimuth Hood +3",
     body={ name="Nyame Mail", augments={'Path: B',}},
     hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
