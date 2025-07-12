@@ -3,7 +3,7 @@ function user_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal')
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
-    state.IdleMode:options('Normal', 'PDT', 'TPEat')
+    state.IdleMode:options('Normal')
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
@@ -31,9 +31,23 @@ function init_gear_sets()
 	-- Midcast sets --
 	------------------
 	
+	sets.midcast['Absorb-TP'] = {
+	head="Azimuth Hood +3",
+    body="Azimuth Coat +3",
+    hands="Azimuth Gloves +3",
+    legs="Azimuth Tights +3",
+    feet="Azimuth Gaiters +3",
+    neck="Erra Pendant",
+    waist="Null Belt",
+    left_ear="Malignance Earring",
+    right_ear="Crep. Earring",
+    left_ring="Medada's Ring",
+    right_ring="Stikini Ring",
+    back="Null Shawl"}
+	
     sets.midcast.FastRecast = {    
-		main="Sucellus",
-		sub="Genmei Shield",
+		--main="Sucellus",
+		--sub="Genmei Shield",
 		range="Dunna",
 		head="Merlinic Hood",--Augment merlinic for 7%
 		body="Merlinic Jubbah",--Augment merlinic for 7%
@@ -346,11 +360,7 @@ function init_gear_sets()
 
 	-- Defense sets
 	
-	sets.defense.PDT = {
-		neck="Loricate Torque +1",
-		ring1={ name="Dark Ring", augments={'Magic dmg. taken -4%','Phys. dmg. taken -4%',}},
-		ring2="Defending Ring"
-}
+	sets.defense.PDT = {}
 
 	sets.defense.MDT = {}
 		
@@ -395,8 +405,8 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = { --68% 
-		main="Sucellus",
-		sub="Genmei Shield",
+		--main="Sucellus",
+		--sub="Genmei Shield",
 		range="Dunna",
 		head="Merlinic Hood",--Augment merlinic for 7%
 		body="Merlinic Jubbah",--Augment merlinic for 7%
