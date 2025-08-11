@@ -104,26 +104,68 @@ function init_gear_sets()
 	------------------
 	
 	sets.precast.JA.Jump = {
-	    ammo="Ginsen",
+	    ammo="Ginsen", -- Aurgelmir orb
 		head="Flam. Zucchetto +2",
-		body="", --Ptero. Mail +3
-		hands="", --Vis. Fng. Gaunt. +3
-		neck={ name="Vim Torque +1", augments={'Path: A',}},
-		legs="", --Ptero. Brais +3
+		body="Vishap Mail +3",
+		hands="Vis. Fng. Gaunt. +3",
+		legs="Pteroslaver Brais +1", -- +3
 		feet="Ostro Greaves",
-		waist="Ioskeha Belt",
-		left_ear="Brutal Earring",
+		neck={ name="Vim Torque +1", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Brutal Earring", --telos earring
 		right_ear="Sherida Earring",
-		left_ring="Petrov Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
 }  
 
 	sets.precast.JA.Angon = {ammo="Angon"} --hands="Ptero. Fin. G. +1"
 	sets.precast.JA['Ancient Circle'] = {} --legs="Vishap Brais"
-	sets.precast.JA['High Jump'] = {}
-	sets.precast.JA['Soul Jump'] = {}
-	sets.precast.JA['Spirit Jump'] = {}
+	sets.precast.JA['High Jump'] = {
+		ammo="Ginsen", -- Aurgelmir orb
+		head="Flam. Zucchetto +2",
+		body="Vishap Mail +3",
+		hands="Vis. Fng. Gaunt. +3",
+		legs="Pteroslaver Brais +1", -- +3
+		feet="Ostro Greaves",
+		neck={ name="Vim Torque +1", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Brutal Earring", --telos earring
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
+	}
+	sets.precast.JA['Soul Jump'] = {
+		ammo="Ginsen", -- Aurgelmir orb
+		head="Flam. Zucchetto +2",
+		body="Vishap Mail +3",
+		hands="Vis. Fng. Gaunt. +3",
+		legs="Pteroslaver Brais +1", --+3
+		feet="Ostro Greaves",
+		neck={ name="Vim Torque +1", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Brutal Earring", --telos earring
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
+	}
+	sets.precast.JA['Spirit Jump'] = {
+		ammo="Ginsen", -- Aurgelmir orb
+		head="Flam. Zucchetto +2",
+		body="Vishap Mail +3",
+		hands="Vis. Fng. Gaunt. +3",
+		legs="Pteroslaver Brais +1", -- +3
+		feet="Ostro Greaves", -- Peltast's schynbalds +3 
+		neck={ name="Vim Torque +1", augments={'Path: A',}},
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear="Brutal Earring", --telos earring
+		right_ear="Sherida Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
+	}
 	sets.precast.JA['Super Jump'] = {}
 	sets.precast.JA['Spirit Link'] = {head="Vishap Armet +1",hands="Pel. Vambraces +3"} --head="Vishap Armet",hands="Lnc. Vmbrc. +2"
 	sets.precast.JA['Call Wyvern'] = {} --body="Ptero. Mail +1"
