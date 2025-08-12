@@ -119,7 +119,7 @@ function init_gear_sets()
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}},
 }  
 
-	sets.precast.JA.Angon = {ammo="Angon"} --hands="Ptero. Fin. G. +1"
+	sets.precast.JA.Angon = {ammo="Angon",hands="Ptero. Fin. G. +1"}
 	sets.precast.JA['Ancient Circle'] = {} --legs="Vishap Brais"
 	sets.precast.JA['High Jump'] = {
 		ammo="Ginsen", -- Aurgelmir orb
