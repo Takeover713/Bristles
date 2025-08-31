@@ -501,7 +501,7 @@ function init_gear_sets()
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
     waist="Windbuffet Belt +1",
     left_ear="Crep. Earring",
-    right_ear="Mache Earring +1",
+    right_ear="Dedition Earring",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
