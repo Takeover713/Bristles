@@ -41,7 +41,7 @@ function init_gear_sets()
 	-- Idle sets
 	sets.idle = {
 		ammo="Staunch Tathlum +1",
-		head="Hjarrandi Helm" --"Null Masque",
+		head="Hjarrandi Helm", --"Null Masque",
 		body={ name="Sakpata's Plate", augments={'Path: A',}},
 		hands={ name="Sakpata's Gauntlets", augments={'Path: A',}},
 		legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
