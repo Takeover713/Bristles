@@ -30,7 +30,7 @@ function init_gear_sets()
 
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.Savage = {main="Naegling",sub="Diamond Buckler +1"}
+	sets.weapons.Savage = {main="Naegling",sub="Regis"}
 	sets.weapons.Prime = {main="Gae Buide",sub="Utu Grip"}
 	
 	---------------
@@ -215,32 +215,32 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	sets.engaged = {		
-		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
+		ammo="Ginsen",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Nyame Mail",
     hands="Pel. Vambraces +3",
-    legs="Gleti's Breeches",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist="Ioskeha Belt",
+    neck={ name="Dgn. Collar +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Dedition Earring",
+    right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 		
 	sets.engaged.DTLite = {
-		ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-    head="Hjarrandi Helm",
-    body="Gleti's Cuirass",
+		ammo="Ginsen",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Nyame Mail",
     hands="Pel. Vambraces +3",
-    legs="Gleti's Breeches",
+    legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Vim Torque +1", augments={'Path: A',}},
-    waist="Ioskeha Belt",
+    neck={ name="Dgn. Collar +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Dedition Earring",
+    right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
     back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
