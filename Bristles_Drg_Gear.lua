@@ -7,7 +7,7 @@ function user_setup()
     state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT')
-	state.Weapons:options('Trishula','Savage')
+	state.Weapons:options('Trishula','Savage','Club')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
 	-- Additional local binds
@@ -31,6 +31,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
 	sets.weapons.Savage = {main="Naegling",sub="Regis"}
+	sets.weapons.Club = {main="Mafic cudgel",sub="Regis"}
 	sets.weapons.Prime = {main="Gae Buide",sub="Utu Grip"}
 	
 	---------------

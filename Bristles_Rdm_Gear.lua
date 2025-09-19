@@ -42,7 +42,7 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Genmei Shield",
 		ammo="Homiliary",
-		head="Viti. Chapeau +2", -- +3, Dynamis
+		head="Viti. Chapeau +3",
 		body="Lethargy Sayon +3",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -97,7 +97,7 @@ sets.idle.Refresh = {
 		--main={ name="Crocea Mors", augments={'Path: C',}}, --AH Sword
 		sub="Genmei Shield",
 		ammo="Staunch Tathlum +1",          -- 0% FC, **11% SIRD**
-		head="Atro. Chapeau +2",            -- 14% FC
+		head="Atro. Chapeau +4",            -- 14% FC
 		body="Viti. Tabard +1",             -- 13% FC, **10% Quick Magic** Bastok to unlock body
 		hands="Leyline Gloves",             -- 8% FC, no SIRD/QM
 		legs="Carmine Cuisses +1",          -- 0% FC, **20% SIRD**

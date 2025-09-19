@@ -7,7 +7,7 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT', 'NukeLock', 'GeoLock', 'PetPDT')
 	state.MagicalDefenseMode:options('MDT', 'NukeLock')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Idris','LorgMor')
+	state.Weapons:options('None','Idris','LorgMor','Zeni','Zeni2000')
 	
 	autoindi = "Fury"
 	autogeo = "Frailty"
@@ -26,6 +26,8 @@ function init_gear_sets()
 	sets.WakeUpWeapons = {main="Lorg Mor"}
 	sets.weapons.LorgMor = {main="Lorg Mor",sub="Genmei Shield"}
 	sets.weapons.Idris = {main="Idris",sub="Genmei Shield"}
+	sets.weapons.Zeni = {range="Soultrapper",ammo="Blank Soulplate"}
+	sets.weapons.Zeni2000 = {range="Soultrapper 2000",ammo="Blank Soulplate"}
 	
 	------------------
 	-- Midcast sets --
@@ -46,8 +48,6 @@ function init_gear_sets()
     back="Null Shawl"}
 	
     sets.midcast.FastRecast = {    
-		--main="Sucellus",
-		--sub="Genmei Shield",
 		range="Dunna",
 		head="Merlinic Hood",--Augment merlinic for 7%
 		body="Merlinic Jubbah",--Augment merlinic for 7%
@@ -69,7 +69,7 @@ function init_gear_sets()
 		range="Dunna",
 		head="Azimuth Hood +3",
 		body="Bagua Tunic +1", 
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Bagua Pants +3",
 		feet="Bagua Sandals +3",
 		neck="Bagua Charm +2",
@@ -175,7 +175,7 @@ function init_gear_sets()
 		ammo="Pemphredo Tathlum",
 		head="Geo. Galero +2",
 		body="Geomancy Tunic +2",
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Geomancy Pants +2",
 		feet="Geo. Sandals +2",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -254,7 +254,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Assid. Pants +1",
 		feet="Geo. Sandals +2",
 		neck="Loricate Torque +1",
@@ -274,7 +274,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
 		feet="Bagua Sandals +3",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -291,7 +291,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
 		feet="Bagua Sandals +3",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -309,7 +309,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
 		feet="Bagua Sandals +3",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -326,7 +326,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
 		feet="Bagua Sandals +3",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
@@ -346,7 +346,7 @@ function init_gear_sets()
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
 		body="Mallquis Saio +1",
-		hands="Geo. Mitaines +3",
+		hands="Geo. Mitaines +4",
 		legs="Assid. Pants +1",
 		feet="Mallquis Clogs +1",
 		neck="Loricate Torque +1",
@@ -405,8 +405,6 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 
 	sets.precast.FC = { --68% 
-		--main="Sucellus",
-		--sub="Genmei Shield",
 		range="Dunna",
 		head="Merlinic Hood",--Augment merlinic for 7%
 		body="Merlinic Jubbah",--Augment merlinic for 7%
@@ -501,7 +499,7 @@ function init_gear_sets()
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
     waist="Windbuffet Belt +1",
     left_ear="Crep. Earring",
-    right_ear="Dedition Earring",
+    right_ear="Mache Earring +1",
     left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
