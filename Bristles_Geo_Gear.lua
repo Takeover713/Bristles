@@ -22,12 +22,149 @@ end
 
 function init_gear_sets()
 
-
 	sets.WakeUpWeapons = {main="Lorg Mor"}
 	sets.weapons.LorgMor = {main="Lorg Mor",sub="Genmei Shield"}
 	sets.weapons.Idris = {main="Idris",sub="Genmei Shield"}
 	sets.weapons.Zeni = {range="Soultrapper",ammo="Blank Soulplate"}
 	sets.weapons.Zeni2000 = {range="Soultrapper 2000",ammo="Blank Soulplate"}
+	
+	--------------------------------------
+	-- Idle/resting/defense/etc sets
+	--------------------------------------
+
+	-- Resting sets
+	sets.resting = {	
+		main="Chatoyant Staff",
+		neck="Grandiose Chain",
+        waist="Austerity Belt"}
+
+	-- Idle sets
+
+	sets.idle = {
+		main="Lorg Mor",sub="Genmei Shield",
+		range="Dunna",
+		head="Azimuth Hood +3",
+		body="Azimuth Coat +3",
+		hands="Bagua Mitaines +3",
+		legs="Assid. Pants +1",
+		feet="Geo. Sandals +3",
+		neck="Loricate Torque +1",
+		waist="Witful Belt",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring",
+		left_ring="Warden's Ring",
+		right_ring="Defending Ring",
+		back="Solemnity Cape"
+}
+		
+	sets.idle.PDT = {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Azimuth Coat +3",
+		hands="Geo. Mitaines +4",
+		legs="Assid. Pants +1",
+		feet="Geo. Sandals +3",
+		neck="Loricate Torque +1",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring",
+		left_ring="Warden's Ring",
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+}
+		
+	sets.idle.TPEat = set_combine(sets.idle, {neck="Chrys. Torque"})
+
+	-- .Pet sets are for when Luopan is present.
+	sets.idle.Pet = {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		hands="Geo. Mitaines +4",
+		legs="Nyame Flanchard", --Agwu's Slops, Ongo
+		feet="Bagua Sandals +3",
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		left_ear="Etiolation Earring",
+		right_ear="Moonshade Earring", --Odnowa Earring R15
+		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
+}
+
+	sets.idle.PDT.Pet = {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		hands="Geo. Mitaines +4",
+		legs="Nyame Flanchard", --Agwu's Slops, Ongo
+		feet="Bagua Sandals +3",
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		left_ear="Etiolation Earring",
+		right_ear="Moonshade Earring", --Odnowa Earring R15
+		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
+}
+
+	-- .Indi sets are for when an Indi-spell is active.
+	sets.idle.Indi = set_combine(sets.idle, {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		hands="Geo. Mitaines +4",
+		legs="Nyame Flanchard", --Agwu's Slops, Ongo
+		feet="Bagua Sandals +3",
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		left_ear="Etiolation Earring",
+		right_ear="Moonshade Earring", --Odnowa Earring R15
+		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
+})
+		
+	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		hands="Geo. Mitaines +4",
+		legs="Nyame Flanchard", --Agwu's Slops, Ongo
+		feet="Bagua Sandals +3",
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		left_ear="Etiolation Earring",
+		right_ear="Moonshade Earring", --Odnowa Earring R15
+		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
+})
+		
+	sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {legs="Bagua Pants +3"}) 
+	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
+
+	sets.idle.Weak = {
+		main="Lorg Mor",sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body="Mallquis Saio +1",
+		hands="Geo. Mitaines +4",
+		legs="Assid. Pants +1",
+		feet="Mallquis Clogs +1",
+		neck="Loricate Torque +1",
+		left_ear="Etiolation Earring",
+		right_ear="Genmei Earring",
+		left_ring="Warden's Ring",
+		right_ring="Defending Ring",
+		waist="Isa Belt",
+		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+}
 	
 	------------------
 	-- Midcast sets --
@@ -132,7 +269,7 @@ function init_gear_sets()
 		left_ear="Malignance Earring",
 		right_ear="Regal Earring",
 		left_ring="Medada's Ring",
-		right_ring="Freke Ring", --"Metamor. Ring +1" Lustreless Scales
+		right_ring="Metamor. Ring +1",
 		back={ name="Nantosuelta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 }
 
@@ -177,7 +314,7 @@ function init_gear_sets()
 		body="Geomancy Tunic +2",
 		hands="Geo. Mitaines +4",
 		legs="Geomancy Pants +2",
-		feet="Geo. Sandals +2",
+		feet="Geo. Sandals +3",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		waist="Eschan Stone",
 		left_ear="Malignance Earring",
@@ -220,144 +357,6 @@ function init_gear_sets()
 	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",ear1="Gifted Earring",ear2="Loquacious Earring",waist="Sekhmet Corset"})
 	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",ear1="Gifted Earring",ear2="Loquacious Earring",waist="Sekhmet Corset"})
 
-	--------------------------------------
-	-- Idle/resting/defense/etc sets
-	--------------------------------------
-
-	-- Resting sets
-	sets.resting = {	
-		main="Chatoyant Staff",
-		neck="Grandiose Chain",
-        waist="Austerity Belt"}
-
-	-- Idle sets
-
-	sets.idle = {
-		main="Lorg Mor",sub="Genmei Shield",
-		range="Dunna",
-		head="Azimuth Hood +3",
-		body="Azimuth Coat +3",
-		hands="Bagua Mitaines +3",
-		legs="Assid. Pants +1",
-		feet="Geo. Sandals +2",
-		neck="Loricate Torque +1",
-		waist="Witful Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
-		right_ring="Defending Ring",
-		back="Solemnity Cape"
-}
-		
-	sets.idle.PDT = {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Azimuth Coat +3",
-		hands="Geo. Mitaines +4",
-		legs="Assid. Pants +1",
-		feet="Geo. Sandals +2",
-		neck="Loricate Torque +1",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
-}
-		
-	sets.idle.TPEat = set_combine(sets.idle, {neck="Chrys. Torque"})
-
-	-- .Pet sets are for when Luopan is present.
-	sets.idle.Pet = {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +4",
-		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
-		neck={ name="Bagua Charm +2", augments={'Path: A',}},
-		left_ear="Etiolation Earring",
-		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
-}
-
-	sets.idle.PDT.Pet = {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +4",
-		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
-		neck={ name="Bagua Charm +2", augments={'Path: A',}},
-		left_ear="Etiolation Earring",
-		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
-}
-
-	-- .Indi sets are for when an Indi-spell is active.
-	sets.idle.Indi = set_combine(sets.idle, {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +4",
-		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
-		neck={ name="Bagua Charm +2", augments={'Path: A',}},
-		left_ear="Etiolation Earring",
-		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
-})
-		
-	sets.idle.Pet.Indi = set_combine(sets.idle.Pet, {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
-		hands="Geo. Mitaines +4",
-		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
-		neck={ name="Bagua Charm +2", augments={'Path: A',}},
-		left_ear="Etiolation Earring",
-		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
-})
-		
-	sets.idle.PDT.Indi = set_combine(sets.idle.PDT, {legs="Bagua Pants +3"}) 
-	sets.idle.PDT.Pet.Indi = set_combine(sets.idle.PDT.Pet, {})
-
-	sets.idle.Weak = {
-		main="Lorg Mor",sub="Genmei Shield",
-		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-		head="Azimuth Hood +3",
-		body="Mallquis Saio +1",
-		hands="Geo. Mitaines +4",
-		legs="Assid. Pants +1",
-		feet="Mallquis Clogs +1",
-		neck="Loricate Torque +1",
-		left_ear="Etiolation Earring",
-		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
-		right_ring="Defending Ring",
-		waist="Isa Belt",
-		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
-}
-
 	-- Defense sets
 	
 	sets.defense.PDT = {}
@@ -372,7 +371,7 @@ function init_gear_sets()
 	
 	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
 
-	sets.Kiting = {feet="Geo. Sandals +2"}
+	sets.Kiting = {feet="Geo. Sandals +3"}
 	sets.latent_refresh = {waist="Fucho-no-obi"}
 	-- sets.DayIdle = {}
 	-- sets.NightIdle = {}
