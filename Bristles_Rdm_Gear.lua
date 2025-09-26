@@ -32,7 +32,7 @@ function init_gear_sets()
 	-- Weapons sets
 	--sets.weapons.Sequence = {main="Sequence",sub="Thibron"}
 	sets.weapons.Odin = {main="Qutrub Knife",sub="Ceremonial Dagger"}
-	sets.weapons.Naegling = {main="Naegling",sub="Pukulatmuj"}
+	sets.weapons.Naegling = {main="Naegling",sub="Pukulatmuj +1"}
 	sets.weapons.BlackHalo = {main="Maxentius", sub="Thibron"}
 	sets.WakeUpWeapons = {main="Prime Sword"}
 	
@@ -42,7 +42,7 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Genmei Shield",
 		ammo="Homiliary",
-		head="Viti. Chapeau +3",
+		head="Viti. Chapeau +4",
 		body="Lethargy Sayon +3",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
@@ -83,7 +83,7 @@ sets.idle.Refresh = {
 	organizer_items = {}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Chainspell'] = {body="Vitiation Tabard +1"}
+	sets.precast.JA['Chainspell'] = {body="Viti. Tabard +3"}
 	
 
 	-- Waltz set (chr and vit)
@@ -98,13 +98,13 @@ sets.idle.Refresh = {
 		sub="Genmei Shield",
 		ammo="Staunch Tathlum +1",          -- 0% FC, **11% SIRD**
 		head="Atro. Chapeau +4",            -- 14% FC
-		body="Viti. Tabard +1",             -- 13% FC, **10% Quick Magic** Bastok to unlock body
+		body="Viti. Tabard +3",             -- 13% FC, **10% Quick Magic**
 		hands="Leyline Gloves",             -- 8% FC, no SIRD/QM
 		legs="Carmine Cuisses +1",          -- 0% FC, **20% SIRD**
-		--feet="Amalric Nails +1",            -- 5% FC, **+2% QM if aug’d**
+		--feet="Amalric Nails +1",          -- 5% FC, **+2% QM if aug’d**
 		neck="Loricate Torque +1",          -- 0% FC, **5% SIRD**
 		waist="Witful Belt",                -- 3% FC, **3% Quick Magic**
-		--left_ear="Magnetic Earring",        -- 0% FC, **8% SIRD**
+		--left_ear="Magnetic Earring",      -- 0% FC, **8% SIRD**
 		right_ear="Loquac. Earring",        -- 2% FC
 		left_ring="Stikini Ring",        	-- 0% FC
 		right_ring="Defending Ring",        -- 0% FC
@@ -124,13 +124,13 @@ sets.idle.Refresh = {
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Leth. houseaux +1", --Empy, sortie
+		feet="Leth. houseaux +3",
 		neck="Rep. Plat. Medal",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Ishvara Earring",
 		left_ring="Epaminondas's Ring",
-		right_ring="Ilabrat Ring", --safe
+		right_ring="Ilabrat Ring",
 		back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	
@@ -160,7 +160,7 @@ sets.idle.Refresh = {
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Leth. houseaux +1", --Sortie
+		feet="Leth. houseaux +3",
 		neck="Rep. Plat. Medal",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
@@ -231,7 +231,7 @@ sets.idle.Refresh = {
 		back="Null Shawl",
 		waist="Null Belt",
 		legs="Leth. Fuseau +3",
-		feet="Leth. Houseaux +3"}
+		feet="Leth. houseaux +3"}
 		
 	sets.RecoverBurst = {head="Ea Hat",neck="Mizu. Kubikazari",body="Seidr Cotehardie",hands="Amalric Gages +1",ring1="Mujin Band",legs="Ea Slops",feet="Jhakri Pigaches +2"}
 	
@@ -246,7 +246,7 @@ sets.idle.Refresh = {
     sets.midcast.Cure = {
 		main="Daybreak",
 		sub="Sors Shield",
-		ammo="Regal Gem", --safe
+		ammo="Regal Gem",
 		head="Vanya Hood",
 		body="Vanya Robe",
 		hands={ name="Kaykaus Cuffs +1", augments={'MP+80','MND+12','Mag. Acc.+20',}},
@@ -277,30 +277,30 @@ sets.idle.Refresh = {
 	sets.Self_Refresh = {back="Grapevine Cape",waist="Gishdubar Sash"}
 
 	sets.midcast['Enhancing Magic'] = {
-		main="Pukulatmuj", -- +1 it
+		main="Pukulatmuj +1",
 		sub="Ammurapi Shield",
-		--ammo="Staunch Tathlum +1", --AH
+		ammo="Staunch Tathlum +1",
 		head="Befouled Crown",
-		body="Vitiation Tabard +1", --Bastok to unlock body
-		--hands="Viti. Gloves +1", --Bastok
-		--legs="Telchine Braconi", --Needs augment, safe 2
-		--feet="Leth. Houseaux +3", --Abys Feet
+		body="Viti. Tabard +3",
+		hands="Viti. Gloves +3",
+		legs="Telchine Braconi",
+		feet="Leth. houseaux +3",
 		--neck={ name="Dls. Torque +2", augments={'Path: A',}}, --AH
-		waist="Embla Sash", --in safe
+		waist="Embla Sash",
 		left_ear="Andoaa Earring",
 		right_ear="Mimir Earring",
 		left_ring="Stikini Ring",
-		--right_ring="Stikini Ring",
+		right_ring="Stikini Ring",
 		back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +8','Enha.mag. skill +5','Mag. Acc.+7','Enh. Mag. eff. dur. +19',}},
 }
 
 
 --Atrophy Gloves are better than Lethargy for me despite the set bonus for duration on others.		
-	sets.buff.ComposureOther = { --Empy Set
-		head="Leth. Chappel +1",
+	sets.buff.ComposureOther = {
+		head="Leth. Chappel +3",
 		body="Lethargy Sayon +3",
-		legs="Leth. Fuseau +1",
-		feet="Leth. Houseaux +1"}
+		legs="Leth. Fuseau +3",
+		feet="Leth. houseaux +3"}
 		
 	--Red Mage enhancing sets are handled in a different way from most, layered on due to the way Composure works//
 	--Don't set combine a full set with these spells, they should layer on Enhancing Set > Composure (If Applicable) > Spell
@@ -313,53 +313,51 @@ sets.idle.Refresh = {
 	sets.midcast.Shell = {ring2="Sheltered Ring"}
 	
 	sets.midcast['Temper II'] = {
-		main="Pukulatmuj +1",                    -- +18 Enh. Skill
+		main="Pukulatmuj +1",                    -- +11 Enh. Skill
 		sub="Ammurapi Shield",                  -- +10% Duration
-		ammo="Pemphredo Tathlum",               -- MACC or Enhancing alt
+		ammo="Pemphredo Tathlum",               -- MACC
 		head="Befouled Crown",                  -- +16 Skill
-		body="Vitiation Tabard +1",             -- Upgrade to +3 for +23 Skill
-		hands="Vitiation Gloves +1",            -- +21 Skill (upgrade to +3)
+		body="Viti. Tabard +3",             	-- 21 Skill + 10% Duration - +3 +23 Skill
+		hands="Viti. Gloves +3",            	-- +21 Skill (upgrade to +3)
 		legs="Telchine Braconi",                -- Augment: Enh. Skill +10
-		feet="Leth. Houseaux +1",               -- Duration (or Atrophy Boots +3 for skill)
+		feet="Leth. houseaux +3",               -- Duration (or Atrophy Boots +3 for skill)
 		neck="Incanter's Torque",               -- +10 Enh. Skill (or Dls. Torque +2 BiS)
 		waist="Embla Sash",                     -- Duration +10%
 		left_ear="Andoaa Earring",              -- Duration boost
 		right_ear="Mimir Earring",              -- +10 Skill
-		left_ring="Stikini Ring",               -- +8 Skill
-		right_ring="Stikini Ring",          	-- +8 Skill
+		left_ring="Stikini Ring",               -- +5 Skill
+		right_ring="Stikini Ring",          	-- +5 Skill
 		back="Ghostfyre Cape",                  -- Duration +19%, Enh. Skill +5
 }
 
-
     sets.midcast.Enspell = {
-		main="Pukulatmuj +1",                  -- +18 Enh. Skill
-		sub="Ammurapi Shield",                -- Enh. Duration +10%
-		ammo="Pemphredo Tathlum",             -- Or keep Staunch
-		head="Befouled Crown",                -- +16 Enh. Skill
-		body="Vitiation Tabard +1",           -- Duration and Skill (Upgrade to +3, Dyna)
-		hands="Vitiation Gloves +1",          -- Enspell damage (get +3, Dyna Bastok)
-		legs="Telchine Braconi",              -- Augment with Enh. Skill
-		feet="Leth. Houseaux +1",             -- Duration (or Atrophy +3 for more skill)
-		neck="Incanter’s Torque",             -- Or Duelist's Torque +2 (BiS)
-		waist="Embla Sash",                   -- Duration +10%
-		left_ear="Andoaa Earring",            -- Duration
-		right_ear="Mimir Earring",            -- +10 Enh. Skill
-		left_ring="Stikini Ring",             -- +8 Skill
-		right_ring="Stikini Ring",			  -- +8 Skill
-		back="Ghostfyre Cape",                -- Duration +19%, Skill
+		main="Pukulatmuj +1", 
+		sub="Ammurapi Shield",
+		ammo="Pemphredo Tathlum",
+		head="Befouled Crown",
+		body="Viti. Tabard +3",
+		hands="Viti. Gloves +3",
+		legs="Telchine Braconi",
+		feet="Leth. houseaux +3",
+		neck="Incanter’s Torque", --neck="Dls. Torque +2",
+		waist="Embla Sash",
+		left_ear="Andoaa Earring",
+		right_ear="Mimir Earring",
+		left_ring="Stikini Ring",
+		right_ring="Stikini Ring",
+		back="Ghostfyre Cape",
 }
 
-	
 	sets.midcast['Enfeebling Magic'] = {
 		main="Daybreak",
 		sub="Ammurapi shield",
 		ammo="Regal Gem",
-		head="Vitiation Chapeau +2", --Dynamis
-		body="Lethargy Sayon +3", --Sortie 
-		hands="Leth. Ganth. +1", --Sortie
-		legs="Lethargy Fuseau +1", --Sortie
-		feet="Vitiation Boots +2", --Dynamis
-		neck="Dls. Torque +2", --AH
+		head="Viti. Chapeau +4",
+		body="Lethargy Sayon +3",
+		hands="Leth. Ganth. +3",
+		legs="Lethargy Fuseau +3",
+		feet="Vitiation Boots +2",
+		--neck="Dls. Torque +2",
 		waist="Luminary Sash",
 		left_ear="Snotra Earring",
 		right_ear="Regal Earring",
@@ -373,11 +371,11 @@ sets.idle.Refresh = {
 		main="Daybreak",
 		sub="Ammurapi shield",
 		ammo="Regal Gem",
-		head="Vitiation Chapeau +2", --Dynamis Bastok Clear
-		body="Lethargy Sayon +3", --Sortie 
-		hands="Leth. Ganth. +1", --Sortie
+		head="Viti. Chapeau +4",
+		body="Lethargy Sayon +3",
+		hands="Leth. Ganth. +3",
 		legs="Chironic Hose",
-		feet="Vitiation Boots +2", --Dynamis
+		feet="Vitiation Boots +2",
 		--neck="Dls. Torque +2",
 		waist="Luminary Sash",
 		left_ear="Snotra Earring",
@@ -409,11 +407,11 @@ sets.idle.Refresh = {
 	sets.midcast.Dia = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast.Diaga = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast['Dia II'] = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
-	sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Viti. Chapeau +3",waist="Chaac Belt"})
+	sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Viti. Chapeau +4",waist="Chaac Belt"})
 	
 	sets.midcast.Bio = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
 	sets.midcast['Bio II'] = set_combine(sets.midcast['Enfeebling Magic'], sets.TreasureHunter)
-	sets.midcast['Bio III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Viti. Chapeau +3",waist="Chaac Belt",feet=gear.chironic_treasure_feet})
+	sets.midcast['Bio III'] = set_combine(sets.midcast['Enfeebling Magic'], {head="Viti. Chapeau +4",waist="Chaac Belt",feet=gear.chironic_treasure_feet})
 
 	sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic'], {})
 	sets.midcast['Slow II'].Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})
@@ -422,11 +420,11 @@ sets.idle.Refresh = {
 		main="Bunzi's Rod",
 		sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
-		head="Leth. Chappel +1", --Sortie
+		head="Leth. Chappel +3",
 		body="Lethargy Sayon +3",
-		hands="Leth. Ganth. +1",
-		legs="Leth. Fuseau +1",
-		feet="Leth. houseaux +1",
+		hands="Leth. Ganth. +3",
+		legs="Leth. Fuseau +3",
+		feet="Leth. houseaux +3",
 		neck="Sanctity Necklace",
 		waist="Acuity Belt +1",
 		left_ear="Regal Earring",
@@ -453,19 +451,18 @@ sets.idle.Refresh = {
 	main="Bunzi's Rod",
 	sub="Ammurapi Shield",
 	range="Ullr",
-	head="Atrophy Chapeau +2", --Cards
+	head="Atrophy Chapeau +4",
 	neck="Erra Pendant",
-    body="Viti. Tabard +1", --Dyna
-	hands="Leth. Ganth. +1", --sortie
+    body="Viti. Tabard +3",
+	hands="Leth. Ganth. +3",
 	waist="Null Belt",
-	legs="Leth. Fuseau +1", --sortie
-	feet="Leth. Houseaux +1", --sortie
+	legs="Leth. Fuseau +3",
+	feet="Leth. houseaux +3",
 	ear1="Malignance Earring",
 	ear2="Leth. Earring +1",
 	ring1="Stikini Ring",
-	ring2="Metamor. Ring +1", --augment to R15
+	ring2="Metamor. Ring +1",
     back="Aurist's Cape +1",
-
 }
 		
 	sets.midcast['Absorb-TP'].Resistant = {}
@@ -509,8 +506,7 @@ sets.idle.Refresh = {
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Null Loop",
-	waist"Sailfi Belt +1",
-    --waist="Reiki Yotai",
+	waist="Sailfi Belt +1",    --waist="Reiki Yotai",
     left_ear="Brutal Earring",
     --left_ear="Telos Earring",
     right_ear="Crepuscular Earring",
@@ -520,8 +516,6 @@ sets.idle.Refresh = {
 }
 
 	sets.engaged.DW = {
-	-- main="Qutrub Knife",
-    -- sub="Ceremonial Dagger",
     ammo="Coiste Bodhar",
     head="Malignance Chapeau",
     body="Malignance Tabard",
@@ -529,7 +523,7 @@ sets.idle.Refresh = {
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Null Loop",
-	waist"Sailfi Belt +1",
+	waist="Sailfi Belt +1",
     --waist="Reiki Yotai",
     left_ear="Brutal Earring",
 	--left_ear="Telos Earring",
@@ -547,7 +541,7 @@ sets.idle.Refresh = {
     legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Null Loop",
-	waist"Sailfi Belt +1",
+	waist="Sailfi Belt +1",
     --waist="Reiki Yotai",
     left_ear="Brutal Earring",
     --left_ear="Telos Earring",
@@ -559,7 +553,6 @@ sets.idle.Refresh = {
 		
 		
 	sets.engaged.PhysicalDef = {}
-		
 	sets.engaged.MagicalDef = {}
 
 end

@@ -45,9 +45,9 @@ function init_gear_sets()
 		range="Dunna",
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
-		hands="Bagua Mitaines +3",
+		hands="Bagua Mitaines +4",
 		legs="Assid. Pants +1",
-		feet="Geo. Sandals +3",
+		feet="Geo. Sandals +4",
 		neck="Loricate Torque +1",
 		waist="Witful Belt",
 		left_ear="Etiolation Earring",
@@ -64,7 +64,7 @@ function init_gear_sets()
 		body="Azimuth Coat +3",
 		hands="Geo. Mitaines +4",
 		legs="Assid. Pants +1",
-		feet="Geo. Sandals +3",
+		feet="Geo. Sandals +4",
 		neck="Loricate Torque +1",
 		left_ear="Etiolation Earring",
 		right_ear="Genmei Earring",
@@ -81,10 +81,10 @@ function init_gear_sets()
 		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		body="Geomancy Tunic +4",
 		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
+		feet="Bagua Sandals +4",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
@@ -98,10 +98,10 @@ function init_gear_sets()
 		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		body="Geomancy Tunic +4",
 		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
+		feet="Bagua Sandals +4",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
@@ -116,10 +116,10 @@ function init_gear_sets()
 		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		body="Geomancy Tunic +4",
 		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
+		feet="Bagua Sandals +4",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
@@ -133,10 +133,10 @@ function init_gear_sets()
 		main="Lorg Mor",sub="Genmei Shield",
 		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
 		head="Azimuth Hood +3",
-		body="Geomancy Tunic +2", --Shamash Robe, Kei
+		body="Geomancy Tunic +4",
 		hands="Geo. Mitaines +4",
 		legs="Nyame Flanchard", --Agwu's Slops, Ongo
-		feet="Bagua Sandals +3",
+		feet="Bagua Sandals +4",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
@@ -208,7 +208,7 @@ function init_gear_sets()
 		body="Bagua Tunic +1", 
 		hands="Geo. Mitaines +4",
 		legs="Bagua Pants +3",
-		feet="Bagua Sandals +3",
+		feet="Bagua Sandals +4",
 		neck="Bagua Charm +2",
 		waist="Austerity Belt",
 		left_ear="Calamitous Earring",
@@ -282,7 +282,7 @@ function init_gear_sets()
 		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
-		hands="Bagua Mitaines +3",
+		hands="Bagua Mitaines +4",
 		legs="Azimuth Tights +3",
 		feet="Azimuth Gaiters +3",
 		neck="Mizu. Kubikazari",
@@ -310,11 +310,11 @@ function init_gear_sets()
 		main="Daybreak",
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Geo. Galero +2",
+		head="Geo. Galero +4",
 		body="Geomancy Tunic +2",
 		hands="Geo. Mitaines +4",
 		legs="Geomancy Pants +2",
-		feet="Geo. Sandals +3",
+		feet="Geo. Sandals +4",
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		waist="Eschan Stone",
 		left_ear="Malignance Earring",
@@ -342,10 +342,22 @@ function init_gear_sets()
 	
 	sets.midcast['Divine Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {ring1="Stikini Ring"})
 		
-	sets.midcast['Enhancing Magic'] = {main="Gada",sub="Ammurapi Shield",ammo="Hasty Pinion +1",
-		head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Gifted Earring",
-		body="Telchine Chas.",hands="Telchine Gloves",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Perimede Cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
+	sets.midcast['Enhancing Magic'] = {
+		main="Gada",
+		sub="Ammurapi Shield",
+		ammo="Hasty Pinion +1",
+		head="Telchine Cap",
+		neck="Incanter's Torque",
+		ear1="Andoaa Earring",
+		ear2="Gifted Earring",
+		body="Telchine Chas.",
+		hands="Telchine Gloves",
+		ring1="Stikini Ring",
+		ring2="Stikini Ring",
+		back="Perimede Cape"
+		,waist="Olympus Sash",
+		legs="Telchine Braconi",
+		feet="Telchine Pigaches"}
 		
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash",legs="Shedir Seraweels"})
 	sets.midcast.Refresh = set_combine(sets.midcast['Enhancing Magic'], {head="Amalric Coif +1"})
@@ -371,7 +383,7 @@ function init_gear_sets()
 	
 	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
 
-	sets.Kiting = {feet="Geo. Sandals +3"}
+	sets.Kiting = {feet="Geo. Sandals +4"}
 	sets.latent_refresh = {waist="Fucho-no-obi"}
 	-- sets.DayIdle = {}
 	-- sets.NightIdle = {}
@@ -385,10 +397,10 @@ function init_gear_sets()
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
-	sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic +2"}
-	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +1"}
+	sets.precast.JA['Life Cycle'] = {body="Geomancy Tunic +4"}
+	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +4"}
 	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +3"}
-	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +3",hands="Bagua Mitaines +3"}
+	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +3",hands="Bagua Mitaines +4"}
 	
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {main="Gada",} --Gada, Indi duration 11%
@@ -424,7 +436,7 @@ function init_gear_sets()
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {
 		neck="Stoicheion Medal",
 		ear2="Barkaro. Earring",
-		hands="Bagua Mitaines +3",
+		hands="Bagua Mitaines +4",
 })
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {})
