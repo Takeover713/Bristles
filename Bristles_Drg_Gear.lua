@@ -28,11 +28,6 @@ end
 
 function init_gear_sets()
 
---Ptero
---Relic Legs +3 > +4
---Relic hands +3 > +4
---Need Temenos points
-
 	-- Weapons sets
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
 	sets.weapons.Savage = {main="Naegling",sub="Regis"}
@@ -114,7 +109,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Vishap Mail +3",
 		hands="Vis. Fng. Gaunt. +3",
-		legs="Pteroslaver Brais +3",
+		legs="Pteroslaver Brais +4",
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -133,7 +128,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Vishap Mail +3",
 		hands="Vis. Fng. Gaunt. +3",
-		legs="Pteroslaver Brais +3",
+		legs="Pteroslaver Brais +4",
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -148,7 +143,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Vishap Mail +3",
 		hands="Vis. Fng. Gaunt. +3",
-		legs="Pteroslaver Brais +3",
+		legs="Pteroslaver Brais +4",
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -163,7 +158,7 @@ function init_gear_sets()
 		head="Flam. Zucchetto +2",
 		body="Vishap Mail +3",
 		hands="Vis. Fng. Gaunt. +3",
-		legs="Pteroslaver Brais +3",
+		legs="Pteroslaver Brais +4",
 		feet="Peltast's Schynbalds +3",  
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
