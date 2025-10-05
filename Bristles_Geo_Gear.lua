@@ -515,40 +515,6 @@ function init_gear_sets()
     right_ring="Chirich Ring +1",
     back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 	}
-	
-	-- {
-	-- main="Lorg Mor",sub="Genmei Shield",
-    -- range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-    -- head="Azimuth Hood +3",
-    -- body={ name="Nyame Mail", augments={'Path: B',}},
-    -- hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
-    -- legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    -- feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    -- neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    -- waist="Windbuffet Belt +1",
-    -- left_ear="Telos Earring",
-    -- right_ear="Mache Earring +1",
-    -- left_ring="Chirich Ring +1",
-    -- right_ring="Chirich Ring +1",
-    -- back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},}
-	
-	-- sets["GEO TP"] = {
-    -- main="Tishtrya",
-    -- sub="Ammurapi Shield",
-    -- ammo="Crepuscular Pebble",
-    -- head="Nyame Helm",
-    -- neck="Combatant's Torque",
-    -- ear1="Cessance Earring",
-    -- ear2="Dedition Earring",
-    -- body="Nyame Mail",
-    -- hands="Nyame Gauntlets",
-    -- ring1="Chirich Ring +1",
-    -- ring2="Chirich Ring +1",
-    -- back="Null Shawl",
-    -- waist="Cornelia's Belt",
-    -- legs="Jhakri Slops +2",
-    -- feet="Nyame Sollerets"
--- }
 		
 	sets.engaged.DW = {
 	main="Lorg Mor",sub="C.Palug Hammer",
