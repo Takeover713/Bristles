@@ -52,7 +52,7 @@ function init_gear_sets()
 		waist="Witful Belt",
 		left_ear="Etiolation Earring",
 		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
+		left_ring="Murky Ring",
 		right_ring="Defending Ring",
 		back="Solemnity Cape"
 }
@@ -68,7 +68,7 @@ function init_gear_sets()
 		neck="Loricate Torque +1",
 		left_ear="Etiolation Earring",
 		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
+		left_ring="Murky Ring",
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
@@ -88,7 +88,7 @@ function init_gear_sets()
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		left_ring="Murky Ring", --Stikini +1 if want refresh
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
@@ -105,7 +105,7 @@ function init_gear_sets()
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		left_ring="Murky Ring", --Stikini +1 if want refresh
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
@@ -123,7 +123,7 @@ function init_gear_sets()
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		left_ring="Murky Ring", --Stikini +1 if want refresh
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
@@ -140,7 +140,7 @@ function init_gear_sets()
 		neck={ name="Bagua Charm +2", augments={'Path: A',}},
 		left_ear="Etiolation Earring",
 		right_ear="Moonshade Earring", --Odnowa Earring R15
-		left_ring="Warden's Ring", --Stikini +1 if want refresh
+		left_ring="Murky Ring", --Stikini +1 if want refresh
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}}, --change to +15 regen
@@ -160,7 +160,7 @@ function init_gear_sets()
 		neck="Loricate Torque +1",
 		left_ear="Etiolation Earring",
 		right_ear="Genmei Earring",
-		left_ring="Warden's Ring",
+		left_ring="Murky Ring",
 		right_ring="Defending Ring",
 		waist="Isa Belt",
 		back={ name="Nantosuelta's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},
@@ -213,7 +213,7 @@ function init_gear_sets()
 		waist="Austerity Belt",
 		left_ear="Calamitous Earring",
 		right_ear="Gifted Earring",
-		left_ring="Warden's Ring",
+		left_ring="Murky Ring",
 		right_ring="Defending Ring",
 		back={ name="Lifestream Cape", augments={'Geomancy Skill +10','Indi. eff. dur. +19','Pet: Damage taken -3%',}},
 		--Need 20% on cape
