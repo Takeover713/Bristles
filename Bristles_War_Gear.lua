@@ -34,6 +34,10 @@ end
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
+---Needs Bastok/Jeuno Clear
+
+
+
 	--------------------------------------
 	-- Start defining the sets
 	--------------------------------------
@@ -49,7 +53,7 @@ function init_gear_sets()
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
 		left_ear="Etiolation Earring",
-		right_ear="Odnowa Earring +1",
+		right_ear="Alabaster Earring",
 		left_ring="Defending Ring",
 		right_ring={ name="Dark Ring", augments={'Phys. dmg. taken -4%','Magic dmg. taken -4%',}},
 		back="Solemnity Cape",
@@ -282,7 +286,7 @@ function init_gear_sets()
 	sets.DayWSEars = {}           
 	
     sets.resting = {}
-	sets.Kiting = {feet="Hermes' Sandals +1"}
+	sets.Kiting = {feet="Hermes' Sandals"}
 	sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {head="Frenzy Sallet"}

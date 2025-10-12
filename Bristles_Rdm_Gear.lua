@@ -7,9 +7,9 @@ function user_job_setup()
     state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Naegling','BlackHalo','Sequence','Odin')
+	state.Weapons:options('None','Naegling','Gleti','BlackHalo')
 	
-	autows_list = {['Naegling']='Savage Blade',['BlackHalo']='Black Halo',['Sequence']='Requiescat'}
+	autows_list = {['Naegling']='Savage Blade',['BlackHalo']='Black Halo',['Gleti']='Evisceration'}
 	autowstp = 1250
 
 		-- Additional local binds
@@ -33,7 +33,8 @@ function init_gear_sets()
 	--sets.weapons.Sequence = {main="Sequence",sub="Thibron"}
 	sets.weapons.Odin = {main="Qutrub Knife",sub="Ceremonial Dagger"}
 	sets.weapons.Naegling = {main="Naegling",sub="Pukulatmuj +1"}
-	sets.weapons.BlackHalo = {main="Maxentius", sub="Thibron"}
+	sets.weapons.BH = {main="Maxentius",sub="Ammurapi Shield"}
+	sets.weapons.Gleti = {main="Gleti's Knife",sub="Naegling"}--sub="Thibron"}
 	sets.WakeUpWeapons = {main="Prime Sword"}
 	
 	-- Idle sets
@@ -51,7 +52,7 @@ function init_gear_sets()
 		waist="Fucho-no-Obi",
 		left_ear="Genmei Earring",
 		right_ear="Etiolation Earring",
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		right_ring="Dark Ring",
 		back="Solemnity Cape",
 }
@@ -69,7 +70,7 @@ sets.idle.Refresh = {
 		waist="Fucho-no-Obi",
 		left_ear="Genmei Earring",
 		right_ear="Etiolation Earring",
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		right_ring="Dark Ring",
 		back="Solemnity Cape",
 }
@@ -107,7 +108,7 @@ sets.idle.Refresh = {
 		--left_ear="Magnetic Earring",      -- 0% FC, **8% SIRD**
 		right_ear="Loquac. Earring",        -- 2% FC
 		left_ring="Stikini Ring",        	-- 0% FC
-		right_ring="Defending Ring",        -- 0% FC
+		right_ring="Murky Ring",        -- 0% FC
 		back={ name="Sucellos's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 --Fast Cast 55% gear capped (with 38% RDM trait/JP)
 --SIRD 64% 
@@ -175,19 +176,35 @@ sets.idle.Refresh = {
 		})
 		
 	sets.precast.WS['Sanguine Blade'] =  {
-		ammo="Pemphredo Tathlum",
-		head="Pixie Hairpin +1",
-		body={ name="Amalric Doublet +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		hands="Jhakri Cuffs +2",
-		legs={ name="Amalric Slops +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		feet={ name="Amalric Nails +1", augments={'MP+80','Mag. Acc.+20','"Mag.Atk.Bns."+20',}},
-		neck="Sanctity Necklace",
-		waist="Orpheus's Sash",
-		left_ear="Malignance Earring",
-		right_ear="Regal Earring",
+		ammo="Coiste Bodhar",
+		head="Nyame Helm",
+		body="Nyame Mail",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Leth. houseaux +3",
+		neck="Rep. Plat. Medal",
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Ishvara Earring",
 		left_ring="Epaminondas's Ring",
-		right_ring="Archon Ring",
-		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}},
+		right_ring="Ilabrat Ring",
+		back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+}
+
+	sets.precast.WS['Aeolian Edge'] =  {
+		ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+		head="Leth. Chappel +3",
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands="Jhakri Cuffs +2",
+		legs="Leth. Fuseau +3",
+		feet="Leth. Houseaux +3",
+		neck="Sibyl Scarf",
+		waist={ name="Acuity Belt +1", augments={'Path: A',}},
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Malignance Earring",
+		left_ring="Epaminondas's Ring",
+		right_ring="Freke Ring",
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Mag.Atk.Bns."+10',}},
 }
 	
 	-- Midcast Sets
