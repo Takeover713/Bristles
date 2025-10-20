@@ -40,7 +40,7 @@ function init_gear_sets()
 	
 	sets.idle = {
 		ammo="Crepuscular Pebble",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		head="Null Masque",
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -61,7 +61,7 @@ function init_gear_sets()
 	-- Defense sets --
 	sets.defense.PDT = {
 		ammo="Crepuscular Pebble",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		head="Null Masque",
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -79,7 +79,7 @@ function init_gear_sets()
 
 	sets.defense.MDT = {
 		ammo="Crepuscular Pebble",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		head="Null Masque",
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
