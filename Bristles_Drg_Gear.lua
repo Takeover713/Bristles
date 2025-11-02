@@ -7,8 +7,19 @@ function user_setup()
     state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT')
-	state.Weapons:options('Trishula','Savage','Club')
+	state.Weapons:options('Trishula','Naegling','Club')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
+
+	autows_list = {['Trishula']='Stardiver',['Naegling']='Savage Blade',['Club']='Judgment'}
+
+		--autows = 'Stardiver'
+		autowstp = 1250
+	
+	-- Weapons sets
+	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
+	sets.weapons.Naegling = {main="Naegling",sub="Regis"}
+	sets.weapons.Club = {main="Mafic Cudgel",sub="Regis"}
+	sets.weapons.Prime = {main="Gae Buide",sub="Utu Grip"}
 
 	-- Additional local binds
 	send_command('bind ^` input /ja "Hasso" <me>')
@@ -17,22 +28,12 @@ function user_setup()
 	send_command('bind @f7 gs c toggle AutoJumpMode')
 	send_command('bind @` gs c cycle SkillchainMode')
 
-		autows = 'Stardiver'
-		autowstp = 1250
-	-- autows = 'Penta Thrust'
-	-- autowstp = 1250
-
-
     select_default_macro_book(1, 16)
 end
 
 function init_gear_sets()
 
-	-- Weapons sets
-	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
-	sets.weapons.Savage = {main="Naegling",sub="Regis"}
-	sets.weapons.Club = {main="Mafic Cudgel",sub="Regis"}
-	sets.weapons.Prime = {main="Gae Buide",sub="Utu Grip"}
+
 	
 	---------------
 	-- Idle sets --
@@ -40,7 +41,7 @@ function init_gear_sets()
 	
 	sets.idle = {
 		ammo="Crepuscular Pebble",
-		head="Null Masque",
+		head={ name="Nyame Helm", augments={'Path: B',}},
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -61,7 +62,7 @@ function init_gear_sets()
 	-- Defense sets --
 	sets.defense.PDT = {
 		ammo="Crepuscular Pebble",
-		head="Null Masque",
+		head={ name="Nyame Helm", augments={'Path: B',}},
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -79,7 +80,7 @@ function init_gear_sets()
 
 	sets.defense.MDT = {
 		ammo="Crepuscular Pebble",
-		head="Null Masque",
+		head={ name="Nyame Helm", augments={'Path: B',}},
 		body="Nyame Mail",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
