@@ -9,6 +9,8 @@ function user_setup()
 	state.ResistDefenseMode:options('MEVA')
 	state.Weapons:options('None','Idris','LorgMor','Zeni','Zeni2000')
 	
+	autows_list = {['BlackHalo']='Black Halo'}
+	
 	autoindi = "Fury"
 	autogeo = "Frailty"
 	autoentrust = "Precision"
@@ -41,7 +43,8 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-		main="Lorg Mor",sub="Genmei Shield",
+		main="Lorg Mor",
+		sub="Genmei Shield",
 		range="Dunna",
 		head="Azimuth Hood +3",
 		body="Azimuth Coat +3",
@@ -171,18 +174,19 @@ function init_gear_sets()
 	------------------
 	
 	sets.midcast['Absorb-TP'] = {
-	head="Azimuth Hood +3",
-    body="Azimuth Coat +3",
-    hands="Azimuth Gloves +3",
-    legs="Azimuth Tights +3",
-    feet="Azimuth Gaiters +3",
-    neck="Erra Pendant",
-    waist="Null Belt",
-    left_ear="Malignance Earring",
-    right_ear="Crep. Earring",
-    left_ring="Medada's Ring",
-    right_ring="Stikini Ring",
-    back="Null Shawl"}
+		head="Azimuth Hood +3",
+		body="Azimuth Coat +3",
+		hands="Azimuth Gloves +3",
+		legs="Azimuth Tights +3",
+		feet="Azimuth Gaiters +3",
+		neck="Erra Pendant",
+		waist="Null Belt",
+		left_ear="Malignance Earring",
+		right_ear="Crep. Earring",
+		left_ring="Medada's Ring",
+		right_ring="Stikini Ring",
+		back="Null Shawl"
+}
 	
     sets.midcast.FastRecast = {    
 		range="Dunna",
@@ -220,7 +224,6 @@ function init_gear_sets()
 }
 
 	--Extra Indi duration as long as you can keep your 900 skill cap.
-	
 	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy, {
 		range="Dunna",
 		legs="Bagua Pants +3",
@@ -241,8 +244,8 @@ function init_gear_sets()
 		waist="Luminary Sash",
 		left_ear="Mendi. Earring",
 		right_ear="Meili Earring",
-		left_ring="Stikini Ring", -- stikini +1
-		right_ring="Defending Ring", -- stikini +1
+		left_ring="Stikini Ring +1",
+		right_ring="Stikini Ring +1",
 		back="Tempered Cape +1",
 }
 		
@@ -354,8 +357,8 @@ function init_gear_sets()
 		hands="Telchine Gloves",
 		ring1="Stikini Ring",
 		ring2="Stikini Ring",
-		back="Perimede Cape"
-		,waist="Olympus Sash",
+		back="Perimede Cape",
+		waist="Olympus Sash",
 		legs="Telchine Braconi",
 		feet="Telchine Pigaches"}
 		
@@ -368,32 +371,10 @@ function init_gear_sets()
 	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",ear1="Gifted Earring",ear2="Loquacious Earring",waist="Sekhmet Corset"})
 	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",ear1="Gifted Earring",ear2="Loquacious Earring",waist="Sekhmet Corset"})
 	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",ear1="Gifted Earring",ear2="Loquacious Earring",waist="Sekhmet Corset"})
-
-	-- Defense sets
 	
-	sets.defense.PDT = {}
-
-	sets.defense.MDT = {}
-		
-    sets.defense.MEVA = {}
-		
-	sets.defense.PetPDT = sets.idle.PDT.Pet
-		
-	sets.defense.NukeLock = sets.midcast['Elemental Magic']
-	
-	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
-
-	sets.Kiting = {feet="Geo. Sandals +4"}
-	sets.latent_refresh = {waist="Fucho-no-obi"}
-	-- sets.DayIdle = {}
-	-- sets.NightIdle = {}
-	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
-	sets.HPDown = {}
-	sets.buff.Doom = set_combine(sets.buff.Doom, {})
-	
-	--------------------------------------
-	-- Precast sets
-	--------------------------------------
+	------------------
+	-- Precast sets --
+	------------------
 
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
@@ -439,8 +420,7 @@ function init_gear_sets()
 		hands="Bagua Mitaines +4",
 })
 
-	sets.precast.FC.Cure = set_combine(sets.precast.FC, {})
-		
+	sets.precast.FC.Cure = set_combine(sets.precast.FC, {})	
 	sets.precast.FC.Curaga = sets.precast.FC.Cure
 	
 	sets.Self_Healing = {
@@ -458,7 +438,9 @@ function init_gear_sets()
 		right_ear="Meili Earring",
 		left_ring="Stikini Ring", -- stikini +1
 		right_ring="Defending Ring", -- stikini +1
-		back="Tempered Cape +1",}
+		back="Tempered Cape +1",
+}
+
 	sets.Cure_Received = {neck="Phalaina Locket",ring1="Kunaji Ring",ring2="Asklepian Ring",waist="Gishdubar Sash"}
 	sets.Self_Refresh = {back="Grapevine Cape",waist="Gishdubar Sash",feet="Inspirited Boots"}
 	
@@ -474,20 +456,20 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-    ammo="Oshasha's Treatise",
-    head={ name="Nyame Helm", augments={'Path: B',}},
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Rep. Plat. Medal",
-    waist="Cornelia's Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="Mache Earring +1",
-    left_ring="Epaminondas's Ring",
-    right_ring="Karieyh Ring +1",
-    back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
-	}
+		ammo="Oshasha's Treatise",
+		head={ name="Nyame Helm", augments={'Path: B',}},
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Rep. Plat. Medal",
+		waist="Cornelia's Belt",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Mache Earring +1",
+		left_ring="Epaminondas's Ring",
+		right_ring="Karieyh Ring +1",
+		back={ name="Nantosuelta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+}
 
 	--------------------------------------
 	-- Engaged sets
@@ -500,37 +482,73 @@ function init_gear_sets()
 
 	-- Normal melee group
 	sets.engaged = {
-	main="Lorg Mor",sub="Genmei Shield",
-	range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
-    head="Azimuth Hood +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    waist="Windbuffet Belt +1",
-    left_ear="Crep. Earring",
-    right_ear="Mache Earring +1",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-	}
+		main="Lorg Mor",
+		sub="Genmei Shield",
+		range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+		head="Azimuth Hood +3",
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		waist="Windbuffet Belt +1",
+		left_ear="Telos Earring",
+		right_ear="Mache Earring +1",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+}
+	
+	-- {
+	-- main="Lorg Mor",sub="Genmei Shield",
+    -- range={ name="Dunna", augments={'MP+20','Mag. Acc.+10','"Fast Cast"+3',}},
+    -- head="Azimuth Hood +3",
+    -- body={ name="Nyame Mail", augments={'Path: B',}},
+    -- hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
+    -- legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    -- feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    -- neck={ name="Bagua Charm +2", augments={'Path: A',}},
+    -- waist="Windbuffet Belt +1",
+    -- left_ear="Telos Earring",
+    -- right_ear="Mache Earring +1",
+    -- left_ring="Chirich Ring +1",
+    -- right_ring="Chirich Ring +1",
+    -- back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10',}},}
+	
+	-- sets["GEO TP"] = {
+    -- main="Tishtrya",
+    -- sub="Ammurapi Shield",
+    -- ammo="Crepuscular Pebble",
+    -- head="Nyame Helm",
+    -- neck="Combatant's Torque",
+    -- ear1="Cessance Earring",
+    -- ear2="Dedition Earring",
+    -- body="Nyame Mail",
+    -- hands="Nyame Gauntlets",
+    -- ring1="Chirich Ring +1",
+    -- ring2="Chirich Ring +1",
+    -- back="Null Shawl",
+    -- waist="Cornelia's Belt",
+    -- legs="Jhakri Slops +2",
+    -- feet="Nyame Sollerets"
+-- }
 		
 	sets.engaged.DW = {
-	main="Lorg Mor",sub="C.Palug Hammer",
-    head="Azimuth Hood +3",
-    body={ name="Nyame Mail", augments={'Path: B',}},
-    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
-    legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    waist="Windbuffet Belt +1",
-    left_ear="Crep. Earring",
-    right_ear="Mache Earring +1",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-	}
+		main="Lorg Mor",
+		sub="C.Palug Hammer",
+		head="Azimuth Hood +3",
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck={ name="Bagua Charm +2", augments={'Path: A',}},
+		waist="Windbuffet Belt +1",
+		left_ear="Telos Earring",
+		right_ear="Mache Earring +1",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Nantosuelta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+}
 
 
 	-- sets.engaged.DW = {
@@ -551,6 +569,23 @@ function init_gear_sets()
 	-- ring2="Chirich Ring +1",
 	-- back="Nantosuelta's Cape",
 	-- }
+	
+		-- Defense sets
+	
+	sets.defense.PDT = {}
+	sets.defense.MDT = {}
+    sets.defense.MEVA = {}		
+	sets.defense.PetPDT = sets.idle.PDT.Pet		
+	sets.defense.NukeLock = sets.midcast['Elemental Magic']	
+	sets.defense.GeoLock = sets.midcast.Geomancy.Indi
+
+	sets.Kiting = {feet="Geo. Sandals +4"}
+	sets.latent_refresh = {waist="Fucho-no-obi"}
+	-- sets.DayIdle = {}
+	-- sets.NightIdle = {}
+	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
+	sets.HPDown = {}
+	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	--------------------------------------
 	-- Custom buff sets
 	--------------------------------------
@@ -566,9 +601,6 @@ function init_gear_sets()
 	legs="Ea Slops",
 	feet="Jhakri Pigaches +2"}
 
-	-- Weapons sets
-	--sets.weapons.Nehushtan = {main='Nehushtan',sub='Genmei Shield'}
-	--sets.weapons.DualWeapons = {main='Nehushtan',sub='Nehushtan'}
 end
 
 -- Select default macro book on initial load or subjob change.
@@ -576,10 +608,8 @@ function select_default_macro_book()
 	set_macro_page(1, 5)
 end
 
-function sub_job_change(new,old)
-send_command('wait 8;input /lockstyleset 20')
+function user_job_lockstyle()
+	windower.chat.input('/lockstyleset 20')
 end
-
-send_command('wait 8;input /lockstyleset 20')
 
 send_command('exec init.txt')

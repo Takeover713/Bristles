@@ -1,25 +1,25 @@
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    state.OffenseMode:options('Normal','SomeAcc','Acc')
-    state.WeaponskillMode:options('Match','Normal','SomeAcc','Acc')
+    state.OffenseMode:options('Normal','Acc')
+    state.WeaponskillMode:options('Match','Normal','Acc')
     state.HybridMode:options('Normal','DTLite')
     state.PhysicalDefenseMode:options('PDT')
     state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Normal', 'PDT')
-	state.Weapons:options('Trishula','Naegling','Club')
+	state.Weapons:options('GaeBuide','Trishula','Naegling','Club')
 	state.Passive = M{['description'] = 'Passive Mode','None','MP','Twilight'}
 
-	autows_list = {['Trishula']='Stardiver',['Naegling']='Savage Blade',['Club']='Judgment'}
+	autows_list = {['GaeBuide']='Diarmuid',['Trishula']='Stardiver',['Naegling']='Savage Blade',['Club']='Judgment'}
 
 		--autows = 'Stardiver'
 		autowstp = 1250
 	
 	-- Weapons sets
+	sets.weapons.GaeBuide = {main="Gae Buide",sub="Utu Grip"}
 	sets.weapons.Trishula = {main="Trishula",sub="Utu Grip"}
 	sets.weapons.Naegling = {main="Naegling",sub="Regis"}
 	sets.weapons.Club = {main="Mafic Cudgel",sub="Regis"}
-	sets.weapons.Prime = {main="Gae Buide",sub="Utu Grip"}
 
 	-- Additional local binds
 	send_command('bind ^` input /ja "Hasso" <me>')
@@ -32,26 +32,24 @@ function user_setup()
 end
 
 function init_gear_sets()
-
-
 	
 	---------------
 	-- Idle sets --
 	---------------
 	
 	sets.idle = {
-		ammo="Crepuscular Pebble",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+		ammo="Staunch Tathlum +1",
+		head="Peltast's Mezail +3",
 		body="Nyame Mail",
-		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Gleti's Boots",
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
-		left_ear="Genmei Earring",
+		left_ear="Eabani Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
-		right_ring={ name="Dark Ring", augments={'Magic dmg. taken -4%','Phys. dmg. taken -4%',}},
+		right_ring="Murky Ring",
 		back="Solemnity Cape",
 }
 		
@@ -114,7 +112,7 @@ function init_gear_sets()
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Brutal Earring", --telos earring
+		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
@@ -133,7 +131,7 @@ function init_gear_sets()
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Brutal Earring", --telos earring
+		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
@@ -148,7 +146,7 @@ function init_gear_sets()
 		feet="Ostro Greaves",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Brutal Earring", --telos earring
+		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
@@ -163,7 +161,7 @@ function init_gear_sets()
 		feet="Peltast's Schynbalds +3",  
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Brutal Earring", --telos earring
+		left_ear="Telos Earring",
 		right_ear="Sherida Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Niqmaddu Ring",
@@ -217,35 +215,35 @@ function init_gear_sets()
 	-- If you create a set with both offense and defense modes, the offense mode should be first.
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
-	sets.engaged = {		
-		ammo="Ginsen",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+	sets.engaged = {
+		ammo="Coiste Bodhar",
+		head="Nyame Helm",
 		body="Nyame Mail",
 		hands="Pel. Vambraces +3",
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck={ name="Dgn. Collar +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Sherida Earring",
-		right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ear="Telos Earring",	--right_ear="Sroda Earring", if  Wyvern
+		right_ear="Sherida Earring",
+		left_ring="Niqmaddu Ring",
+		right_ring="Chirich Ring +1", --Moonlight Ring
 		back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 		
-	sets.engaged.DTLite = {
-		ammo="Ginsen",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+	sets.engaged.DTLite = { --Max DT & MEva
+		ammo="Coiste Bodhar",
+		head="Nyame Helm",
 		body="Nyame Mail",
 		hands="Pel. Vambraces +3",
-		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
 		neck={ name="Dgn. Collar +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Sherida Earring",
-		right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		--right_ear="Sroda Earring", --Telos Earring if no Wyvern
+		right_ear="Sherida Earring",
+		left_ring="Niqmaddu Ring",
+		right_ring="Chirich Ring +1", --Moonlight Ring
 		back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 }
 		
@@ -266,25 +264,23 @@ function init_gear_sets()
 	----------------------
 	
 	sets.precast.WS = {
-    ammo="Coiste Bodhar",
-    head="Peltast's Mezail +3",
-    body="Gleti's Cuirass",
-    hands="Gleti's Gauntlets",
-    legs="Gleti's Breeches",
-    feet="Flam. Gambieras +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="Pel. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','Crit.hit rate+4',}},
-    left_ring="Sroda Ring",
-    right_ring="Niqmaddu Ring",
-    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+		ammo="Coiste Bodhar",
+		head="Peltast's Mezail +3",
+		body="Gleti's Cuirass",
+		hands="Gleti's Gauntlets",
+		legs="Gleti's Breeches",
+		feet="Flam. Gambieras +2",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Pel. Earring +1",
+		left_ring="Sroda Ring",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
 }
 	
-	sets.precast.WS.SomeAcc = set_combine(sets.precast.WS, {})
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
-	sets.precast.WS.FullAcc = set_combine(sets.precast.WS, {})
-	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
+
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Savage Blade'] = {
@@ -306,9 +302,12 @@ function init_gear_sets()
 	sets.precast.WS['Stardiver'] = set_combine(sets.precast.WS, {
 		ammo="Coiste Bodhar",
 		head="Ptero. Armet +4",
-		--body="Gleti's Cuirass",
+		body="Nyame Mail",
+			--body="Gleti's Cuirass", Needs augs
 		hands="Ptero. Fin. G. +4",
-		--legs="Gleti's Breeches",
+			--hands="Gleti's Gauntlets", Needs augs
+		legs="Nyame Flanchard",
+			--legs="Gleti's Breeches", Needs augs
 		feet="Nyame Sollerets",
 		neck="Dgn. Collar +2",
 		left_ear="Moonshade Earring",
@@ -319,13 +318,30 @@ function init_gear_sets()
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
 })
 
-	sets.precast.WS['Stardiver'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Stardiver'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
 	sets.precast.WS['Drakesbane'] = set_combine(sets.precast.WS, {})
-	sets.precast.WS['Drakesbane'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {})
-	sets.precast.WS['Drakesbane'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+
+	sets.precast.WS['Diarmuid'] = set_combine(sets.precast.WS, {
+		ammo="Coiste Bodhar",
+		head="Peltast's Mezail +3",
+		body="Nyame Mail",
+			--body="Gleti's Cuirass", Needs augs
+		hands="Ptero. Fin. G. +4",
+		legs="Nyame Flanchard",
+			--legs="Gleti's Breeches", Needs augs
+		feet="Nyame Sollerets",
+		neck={ name="Dgn. Collar +2", augments={'Path: A',}},
+		waist="Sailfi Belt +1",
+		left_ear="Moonshade Earring",
+		right_ear="Pel. Earring +1",
+		left_ring="Sroda Ring",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+})
+
+	sets.precast.WS['Diarmuid'].Acc = set_combine(sets.precast.WS.Acc, {})
 
 end
 
