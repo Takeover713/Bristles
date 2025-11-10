@@ -275,7 +275,7 @@ function init_gear_sets()
 		ammo="Pemphredo Tathlum",
 		head="Ebers Cap +3", --Kaykaus Mitra +1 C: Spell interruption rate -12%
 		body="Ebers Bliaut +3",
-    	hands="Theophany Mitts +3",
+    	hands="Theophany Mitts +4",
 		legs="Ebers Pant. +3", 
 		feet="Vanya Clogs", --Kaykaus Boots +1 D: Mag. Acc. +20,Cure Potency +6,Fast Cast +4%
 		neck="Colossus's Torque", --neck={ name="Clr. Torque +2", augments={'Path: A',}},
@@ -286,7 +286,7 @@ function init_gear_sets()
 		left_ring="Naji's Loop",
 		right_ring="Mephitas's Ring +1",
 		back="Tempered Cape +1",
-    back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
 }
 
 	sets.midcast.CureSolace = set_combine(sets.midcast.Cure,{})
@@ -302,8 +302,8 @@ function init_gear_sets()
 		sub="Sors Shield", --sub="Thuellaic Ecu +1",
 		ammo="Pemphredo Tathlum",
 		head="Ebers Cap +3", -- Kaykaus Mitra +1 C: Spell interruption rate -12%
-		body="Theo. Bliaut +3",
-    	hands="Theophany Mitts +3",
+		body="Theo. Bliaut +4",
+    	hands="Theophany Mitts +4",
 		legs="Ebers Pant. +3", 
 		feet="Vanya Clogs",--Kaykaus Boots +1 D: Mag. Acc. +20,Cure Potency +6,Fast Cast +4%
 		neck="Colossus's Torque", --neck={ name="Clr. Torque +2", augments={'Path: A',}},
@@ -313,7 +313,7 @@ function init_gear_sets()
 		right_ear="Glorious Earring",
 		left_ring="Naji's Loop",
 		right_ring="Mephitas's Ring +1",
-    back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Damage taken-5%',}},
 }
 		
 	sets.midcast.LightWeatherCuraga = set_combine(sets.midcast.Curaga,{})
@@ -442,7 +442,7 @@ function init_gear_sets()
 	head="Inyanga Tiara +2",
 	hands="Ebers Mitts +3",
 	--body="Piety Bliaut +4",
-	legs="Theophany Pantaloons +3"
+	legs="Theophany Pantaloons +4"
 })
 	
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Vocane Ring +1",feet="Piety Duckbills +2",ear1="Gifted Earring",waist="Sekhmet Corset"})
@@ -506,8 +506,8 @@ function init_gear_sets()
 		main="Maxentius", --Augmented Bunzi
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Theophany Cap +3",
-		body="Theo. Bliaut +3",
+		head="Theophany Cap +2",
+		body="Theo. Bliaut +4",
 		hands="Theo. Mitts +4",
 		legs="Theophany Pantaloons +4",
 		feet="Theo. Duckbills +4",
@@ -524,8 +524,8 @@ function init_gear_sets()
 		main="Maxentius", --Augmented Bunzi
 		sub="Ammurapi Shield",
 		ammo="Pemphredo Tathlum",
-		head="Theophany Cap +3",
-		body="Theo. Bliaut +3",
+		head="Theophany Cap +2",
+		body="Theo. Bliaut +4",
 		hands="Theo. Mitts +4",
 		legs="Theophany Pantaloons +4",
 		feet="Theo. Duckbills +4",
