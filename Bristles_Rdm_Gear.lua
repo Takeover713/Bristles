@@ -1,13 +1,13 @@
 function user_job_setup()
 	-- Options: Override default values
-    state.OffenseMode:options('Normal')
+    state.OffenseMode:options('Normal','MagicalDef')
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
     state.IdleMode:options('Normal', 'Refresh', 'PDT', 'MDT', 'TPEat','DTHippo')
     state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Naegling','Gleti','BH')
+	state.Weapons:options('None','Naegling','Gleti','BlackHalo')
 	
 	autows_list = {['Naegling']='Savage Blade',['BlackHalo']='Black Halo',['Gleti']='Evisceration'}
 	autowstp = 1250
@@ -30,10 +30,9 @@ function init_gear_sets()
 	--------------------------------------
 	
 	-- Weapons sets
-	--sets.weapons.Sequence = {main="Sequence",sub="Thibron"}
 	sets.weapons.Odin = {main="Qutrub Knife",sub="Ceremonial Dagger"}
-	sets.weapons.Naegling = {main="Naegling",sub="Gleti's Knife"}
-	sets.weapons.BH = {main="Maxentius",sub="Ammurapi Shield"}
+	sets.weapons.Naegling = {main="Naegling",sub="Pukulatmuj +1"}
+	sets.weapons.BlackHalo = {main="Maxentius",sub="Ammurapi Shield"}
 	sets.weapons.Gleti = {main="Gleti's Knife",sub="Naegling"}--sub="Thibron"}
 	sets.WakeUpWeapons = {main="Prime Sword"}
 	
@@ -53,11 +52,11 @@ function init_gear_sets()
 		left_ear="Genmei Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Murky Ring",
-		right_ring="Dark Ring",
+		right_ring="Defending Ring",
 		back="Solemnity Cape",
 }
 
-sets.idle.Refresh = {
+	sets.idle.Refresh = {
 		main="Daybreak",
 		sub="Genmei Shield",
 		ammo="Staunch Tathlum +1",
@@ -75,8 +74,26 @@ sets.idle.Refresh = {
 		back="Solemnity Cape",
 }
 		
-	sets.idle.PDT = {}	
-	sets.idle.MDT = {}	
+	sets.idle.PDT = {}
+	
+	sets.idle.MDT = {
+		main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Staunch Tathlum +1",
+		head="Viti. Chapeau +4",
+		body="Lethargy Sayon +3",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Warder's Charm +1",
+		waist="Null Belt",
+		left_ear="Genmei Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Murky Ring",
+		right_ring="Defending Ring",
+		back={ name="Sucellos's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
+}
+
 	sets.idle.Weak = {}
 	sets.idle.DTHippo = set_combine(sets.idle.PDT, {})
 	
@@ -86,7 +103,6 @@ sets.idle.Refresh = {
 	-- Precast sets to enhance JAs
 	sets.precast.JA['Chainspell'] = {body="Viti. Tabard +3"}
 	
-
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
 		
@@ -97,18 +113,18 @@ sets.idle.Refresh = {
 	sets.precast.FC = { --RDM gets 30 FC from traits and up to 8 more from JP gifts
 		--main={ name="Crocea Mors", augments={'Path: C',}}, --AH Sword
 		sub="Genmei Shield",
-		ammo="Staunch Tathlum +1",          -- 0% FC, **11% SIRD**
-		head="Atro. Chapeau +4",            -- 14% FC
-		body="Viti. Tabard +3",             -- 13% FC, **10% Quick Magic**
-		hands="Leyline Gloves",             -- 8% FC, no SIRD/QM
-		legs="Carmine Cuisses +1",          -- 0% FC, **20% SIRD**
-		--feet="Amalric Nails +1",          -- 5% FC, **+2% QM if aug’d**
-		neck="Loricate Torque +1",          -- 0% FC, **5% SIRD**
-		waist="Witful Belt",                -- 3% FC, **3% Quick Magic**
-		--left_ear="Magnetic Earring",      -- 0% FC, **8% SIRD**
-		right_ear="Loquac. Earring",        -- 2% FC
-		left_ring="Stikini Ring",        	-- 0% FC
-		right_ring="Murky Ring",        -- 0% FC
+		ammo="Staunch Tathlum +1",
+		head="Atro. Chapeau +4",
+		body="Viti. Tabard +3",
+		hands="Leyline Gloves",
+		legs="Carmine Cuisses +1", 
+		--feet="Amalric Nails +1",
+		neck="Loricate Torque +1",
+		waist="Witful Belt", 
+		--left_ear="Magnetic Earring", 
+		right_ear="Loquac. Earring", 
+		left_ring="Stikini Ring +1",
+		right_ring="Murky Ring",
 		back={ name="Sucellos's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Occ. inc. resist. to stat. ailments+10',}},
 --Fast Cast 55% gear capped (with 38% RDM trait/JP)
 --SIRD 64% 
@@ -133,7 +149,7 @@ sets.idle.Refresh = {
 		left_ring="Epaminondas's Ring",
 		right_ring="Ilabrat Ring",
 		back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	}
+}
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS['Seraph Blade'] =     {
@@ -151,9 +167,9 @@ sets.idle.Refresh = {
 		right_ring="Shiva Ring +1",
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%',}},
 }
+
 	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {})
-	
-	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {neck="Fotia Gorget",ear1="Moonshade Earring",ring1="Begrudging Ring",waist="Fotia Belt",feet="Thereoid Greaves"})
+	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {})
 
 	sets.precast.WS['Savage Blade'] = {    
 		ammo="Coiste Bodhar",
@@ -173,7 +189,8 @@ sets.idle.Refresh = {
 		
 	sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS['Savage Blade'], {
  		ear2="Sherida Earring",
-		})
+		--back={ name="Sucellos's Cape", augments={'MND+20','Accuracy+20 Attack+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+})
 		
 	sets.precast.WS['Sanguine Blade'] =  {
 		ammo="Coiste Bodhar",
@@ -231,7 +248,7 @@ sets.idle.Refresh = {
     left_ring="Freke Ring",
     right_ring="Mujin Band",
 	back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
-	}
+}
 		
 	sets.midcast.Impact = { 
 		main="Maxentius",
@@ -244,18 +261,20 @@ sets.idle.Refresh = {
 		body="Crepuscular Cloak",
 		hands="Leth. Ganth. +3",
 		ring1="Metamor. Ring +1",
-		ring2="Stikini Ring",
+		ring2="Stikini Ring +1",
 		back="Null Shawl",
 		waist="Null Belt",
 		legs="Leth. Fuseau +3",
-		feet="Leth. houseaux +3"}
+		feet="Leth. houseaux +3",
+}
 		
 	sets.RecoverBurst = {head="Ea Hat",neck="Mizu. Kubikazari",body="Seidr Cotehardie",hands="Amalric Gages +1",ring1="Mujin Band",legs="Ea Slops",feet="Jhakri Pigaches +2"}
 	
 	-- Gear for specific elemental nukes.
 
 
-	sets.midcast.FastRecast = {main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Hasty Pinion +1",
+	sets.midcast.FastRecast = {
+		main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Hasty Pinion +1",
 		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Enchntr. Earring +1",
 		body="Zendik Robe",hands="Gende. Gages +1",ring1="Kishar Ring",ring2="Prolix Ring",
 		back="Swith Cape +1",waist="Witful Belt",legs="Psycloth Lappas",feet="Medium's Sabots"}
@@ -273,7 +292,7 @@ sets.idle.Refresh = {
 		waist="Luminary Sash",
 		left_ear="Regal Earring",
 		--right_ear="Magnetic Earring",
-		left_ring="Stikini Ring",
+		left_ring="Stikini Ring +1",
 		--right_ring="Sirona's Ring",
 		back="Tempered Cape +1",
 }
@@ -307,7 +326,7 @@ sets.idle.Refresh = {
 		left_ear="Andoaa Earring",
 		right_ear="Mimir Earring",
 		left_ring="Stikini Ring",
-		right_ring="Stikini Ring",
+		right_ring="Stikini Ring +1",
 		back={ name="Ghostfyre Cape", augments={'Enfb.mag. skill +8','Enha.mag. skill +5','Mag. Acc.+7','Enh. Mag. eff. dur. +19',}},
 }
 
@@ -330,21 +349,21 @@ sets.idle.Refresh = {
 	sets.midcast.Shell = {ring2="Sheltered Ring"}
 	
 	sets.midcast['Temper II'] = {
-		main="Pukulatmuj +1",                    -- +11 Enh. Skill
-		sub="Ammurapi Shield",                  -- +10% Duration
-		ammo="Pemphredo Tathlum",               -- MACC
-		head="Befouled Crown",                  -- +16 Skill
-		body="Viti. Tabard +3",             	-- 21 Skill + 10% Duration - +3 +23 Skill
-		hands="Viti. Gloves +3",            	-- +21 Skill (upgrade to +3)
-		legs="Telchine Braconi",                -- Augment: Enh. Skill +10
-		feet="Leth. houseaux +3",               -- Duration (or Atrophy Boots +3 for skill)
-		neck="Incanter's Torque",               -- +10 Enh. Skill (or Dls. Torque +2 BiS)
-		waist="Embla Sash",                     -- Duration +10%
-		left_ear="Andoaa Earring",              -- Duration boost
-		right_ear="Mimir Earring",              -- +10 Skill
-		left_ring="Stikini Ring",               -- +5 Skill
-		right_ring="Stikini Ring",          	-- +5 Skill
-		back="Ghostfyre Cape",                  -- Duration +19%, Enh. Skill +5
+		main="Pukulatmuj +1", 
+		sub="Ammurapi Shield",
+		ammo="Pemphredo Tathlum",
+		head="Befouled Crown",
+		body="Viti. Tabard +3",
+		hands="Viti. Gloves +3",
+		legs="Telchine Braconi", 
+		feet="Leth. houseaux +3", -- Duration (or Atrophy Boots +3 for skill)
+		neck="Incanter's Torque", -- +10 Enh. Skill (or Dls. Torque +2 BiS)
+		waist="Embla Sash",
+		left_ear="Andoaa Earring",
+		right_ear="Mimir Earring", 
+		left_ring="Stikini Ring",
+		right_ring="Stikini Ring +1",
+		back="Ghostfyre Cape",
 }
 
     sets.midcast.Enspell = {
@@ -356,12 +375,12 @@ sets.idle.Refresh = {
 		hands="Viti. Gloves +3",
 		legs="Telchine Braconi",
 		feet="Leth. houseaux +3",
-		neck="Incanter’s Torque", --neck="Dls. Torque +2",
+		neck="Dls. Torque +2",
 		waist="Embla Sash",
 		left_ear="Andoaa Earring",
 		right_ear="Mimir Earring",
 		left_ring="Stikini Ring",
-		right_ring="Stikini Ring",
+		right_ring="Stikini Ring +1",
 		back="Ghostfyre Cape",
 }
 
@@ -372,16 +391,15 @@ sets.idle.Refresh = {
 		head="Viti. Chapeau +4",
 		body="Lethargy Sayon +3",
 		hands="Leth. Ganth. +3",
-		legs="Lethargy Fuseau +3",
+		legs="Leth. Fuseau +3",
 		feet="Vitiation Boots +2",
-		--neck="Dls. Torque +2",
-		waist="Luminary Sash",
+		neck="Dls. Torque +2",
+		waist="Obstin. Sash",
 		left_ear="Snotra Earring",
 		right_ear="Regal Earring",
-		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --Scales
-		right_ring="Stikini Ring ",
+		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+		right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Mag.Atk.Bns."+10',}},
-		--Enfeebling Skill +10, MACC +20, INT +20
 }
 		
 	sets.midcast['Enfeebling Magic'].Resistant = {
@@ -393,12 +411,12 @@ sets.idle.Refresh = {
 		hands="Leth. Ganth. +3",
 		legs="Chironic Hose",
 		feet="Vitiation Boots +2",
-		--neck="Dls. Torque +2",
+		neck="Dls. Torque +2",
 		waist="Luminary Sash",
 		left_ear="Snotra Earring",
 		right_ear="Regal Earring",
 		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}}, --Scales
-		right_ring="Stikini Ring ",
+		right_ring="Stikini Ring +1",
 		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Mag.Atk.Bns."+10',}},
 }
 		
@@ -465,17 +483,25 @@ sets.idle.Refresh = {
 	sets.midcast.Aspir = sets.midcast.Drain
 	
 	sets.midcast['Absorb-TP'] = {
-		ammo="Regal Gem",
-        head="Null Masque",neck="Null Loop",ear1="Malignance Earring",ear2="Leth. Earring +1",
-        body="Lethargy Sayon +3",hands="Leth. Ganth. +3",ring1="Stikini Ring",ring2="Metamor. Ring +1",
-        back="Null Shawl",waist="Null Belt",legs="Leth. Fuseau +3",feet="Leth. Houseaux +3"} -- ring 1 needs a  stikini ring +1
+		main="Bunzi's Rod",
+		sub="Ammurapi Shield",
+		range="Ullr",
+		head="Atrophy Chapeau +4",
+		neck="Erra Pendant",
+		body="Viti. Tabard +3",
+		hands="Leth. Ganth. +3",
+		waist="Null Belt",
+		legs="Leth. Fuseau +3",
+		feet="Leth. houseaux +3",
+		ear1="Malignance Earring",
+		ear2="Leth. Earring +1",
+		ring1="Stikini Ring +1",
+		ring2="Metamor. Ring +1",
+		back="Aurist's Cape +1",
+}
 		
 	sets.midcast['Absorb-TP'].Resistant = {}
-	
-	sets.midcast.Stun = {ammo="Regal Gem",
-        head="Null Masque",neck="Null Loop",ear1="Malignance Earring",ear2="Leth. Earring +1",
-        body="Lethargy Sayon +3",hands="Leth. Ganth. +3",ring1="Stikini Ring",ring2="Metamor. Ring +1",
-        back="Null Shawl",waist="Null Belt",legs="Leth. Fuseau +3",feet="Leth. Houseaux +3"} -- ring 1 needs a  stikini ring +1
+	sets.midcast.Stun = {}
 	sets.midcast.Stun.Resistant = {}
 
 	-- Sets for special buff conditions on spells.
@@ -508,61 +534,73 @@ sets.idle.Refresh = {
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	sets.engaged = {
-    ammo="Coiste Bodhar",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Null Loop",
-	waist="Sailfi Belt +1",    --waist="Reiki Yotai",
-    left_ear="Brutal Earring",
-    --left_ear="Telos Earring",
-    right_ear="Crepuscular Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
+		ammo="Coiste Bodhar",
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Null Loop",
+		waist="Sailfi Belt +1",    --waist="Reiki Yotai",
+		left_ear="Telos Earring",
+		right_ear="Crepuscular Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
 }
 
 	sets.engaged.DW = {
-    ammo="Coiste Bodhar",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Null Loop",
-	waist="Sailfi Belt +1",
-    --waist="Reiki Yotai",
-    left_ear="Brutal Earring",
-	--left_ear="Telos Earring",
-    right_ear="Crepuscular Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
+		ammo="Coiste Bodhar",
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Null Loop",
+		waist="Sailfi Belt +1",
+		--waist="Reiki Yotai", --Kirin
+		left_ear="Brutal Earring",
+		--left_ear="Telos Earring", --AV
+		right_ear="Crepuscular Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
 }
 		
 	sets.engaged.Enspell = {
-    ammo="Coiste Bodhar",
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
-    neck="Null Loop",
-	waist="Sailfi Belt +1",
-    --waist="Reiki Yotai",
-    left_ear="Brutal Earring",
-    --left_ear="Telos Earring",
-    right_ear="Crepuscular Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
+		ammo="Coiste Bodhar",
+		head="Malignance Chapeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Null Loop",
+		waist="Sailfi Belt +1",
+		--waist="Reiki Yotai",
+		left_ear="Telos Earring",
+		right_ear="Crepuscular Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10',}},
 }
 		
-		
 	sets.engaged.PhysicalDef = {}
-	sets.engaged.MagicalDef = {}
+	
+	sets.engaged.MagicalDef = {		
+		ammo="Coiste Bodhar",
+		head="Bunzi's Hat",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
+		neck="Null Loop",
+		waist="Sailfi Belt +1",	--waist="Reiki Yotai",
+		left_ear="Telos Earring",
+		right_ear="Crepuscular Earring",
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+		back="Null Shawl",
+}
 
 end
 
@@ -575,5 +613,3 @@ end
 function user_job_lockstyle()
 	windower.chat.input('/lockstyleset 20')
 end
-
-send_command('exec init.txt')

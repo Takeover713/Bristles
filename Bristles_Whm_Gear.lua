@@ -185,7 +185,7 @@ function init_gear_sets()
 		main="Queller Rod", --main="C. Palug hammer",
 		sub="Sors Shield",
 		ammo="Impatiens",
-		head="Ebers Cap +3", --head="Piety Cap +4",
+		head="Piety Cap +4",
 		body="Inyanga Jubbah +2",
 		--hands="Fanatic Gloves",
 		legs="Ebers Pant. +3",
@@ -207,7 +207,7 @@ function init_gear_sets()
 
     -- Precast sets to enhance JAs
     sets.precast.JA.Benediction = {body="Piety Bliaut"}
-	sets.precast.JA.Devotion = {head="Piety Cap"}
+	sets.precast.JA.Devotion = {head="Piety Cap +4"}
 
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {}
